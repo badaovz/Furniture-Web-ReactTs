@@ -1,7 +1,6 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
-import { store } from './app/store';
 import App from './App';
 import './sass/index.scss';
 import './index.css';
@@ -24,17 +23,15 @@ root.render(
       cacheLocation='localstorage'
     >
       <Router>
-        <Provider store={store}>
-          <UserProvider>
-            <ProductsProvider>
-              <FilterProvider>
-                <CartProvider>
-                  <App /> 
-                </CartProvider>
-              </FilterProvider>
-            </ProductsProvider>
-          </UserProvider>
-        </Provider>
+        <UserProvider>
+          <ProductsProvider>
+            <FilterProvider>
+              <CartProvider>
+                <App /> 
+              </CartProvider>
+            </FilterProvider>
+          </ProductsProvider>
+        </UserProvider>
       </Router>
     </Auth0Provider>
   </React.StrictMode>

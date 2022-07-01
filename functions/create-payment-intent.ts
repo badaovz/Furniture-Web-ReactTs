@@ -9,6 +9,7 @@ exports.handler = async function(event, context) {
     return total_amount + shipping_free;
   }
 
+  console.log('ssssss')
   try {
     const paymentIntent = await stripe.paymentIntents.create({
       amount: calOrderAmount(),
