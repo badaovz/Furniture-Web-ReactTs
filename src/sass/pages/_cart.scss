@@ -1,0 +1,28 @@
+.cart {
+    margin-bottom: 4rem;
+
+    hr {
+        margin: 2rem 0 3rem;
+    }
+
+    &__control {
+        @include flex( center, space-between);   
+        &__continueShopping {
+            text-transform: capitalize;
+            
+            @include mobile {
+                padding: .5rem;
+            }
+
+        }
+
+        &__clearCart {
+            text-transform: capitalize;
+            background-color: $black-color-light;
+            @include mobile {
+                padding: .5rem;
+            }
+        }
+    }
+
+}
